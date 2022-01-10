@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_07_013918) do
+ActiveRecord::Schema.define(version: 2022_01_07_100204) do
 
-  create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "authors", force: :cascade do |t|
     t.string "author_name"
     t.date "date_birth"
     t.date "date_death"
@@ -20,15 +20,15 @@ ActiveRecord::Schema.define(version: 2022_01_07_013918) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "book_authorships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "book_authorships", force: :cascade do |t|
     t.integer "book_id"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "category_id"
+  create_table "books", force: :cascade do |t|
+    t.bigint "category_id"
     t.string "book_title"
     t.string "isbn"
     t.date "year_published"
@@ -39,15 +39,15 @@ ActiveRecord::Schema.define(version: 2022_01_07_013918) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "category_name"
     t.integer "parent_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "loaned_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "member_id"
+  create_table "loaned_books", force: :cascade do |t|
+    t.integer "user_id"
     t.datetime "date_loaned"
     t.datetime "date_due"
     t.datetime "date_returned"
@@ -58,16 +58,16 @@ ActiveRecord::Schema.define(version: 2022_01_07_013918) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "loaned_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "loaned_details", force: :cascade do |t|
     t.integer "loaned_id"
-    t.integer "book_id"
+    t.bigint "book_id"
     t.integer "quantity"
     t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.integer "role", default: 2
     t.string "name"
     t.string "address"
@@ -79,4 +79,11 @@ ActiveRecord::Schema.define(version: 2022_01_07_013918) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "book_authorships", "authors"
+  add_foreign_key "book_authorships", "books"
+  add_foreign_key "books", "categories"
+  add_foreign_key "loaned_books", "users"
+  add_foreign_key "loaned_books", "users"
+  add_foreign_key "loaned_details", "books"
+  add_foreign_key "loaned_details", "loaned_books", column: "loaned_id"
 end

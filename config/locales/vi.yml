@@ -1,0 +1,20 @@
+vi:
+  static_pages:
+    home:
+      home: Trang chủ
+      text: Đây là trang chủ của quản lý Thư viện
+    help:
+      help: Trợ giúp
+      text: Đây là trang trợ giúp của quản lý Thư viện
+    contact:
+      contact: Liên hệ
+      text: Đây là trang liên hệ của quản lý Thư viện
+  layouts:
+    header:
+      OE_52: OE 52
+      english: Tiếng Anh
+      vietnamese: Tiếng Việt
+      home: Trang chủ
+      help: Trợ giúp
+      contact: Liên hệ
+      log_in: Đăng nhập
