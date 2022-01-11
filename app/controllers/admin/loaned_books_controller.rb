@@ -58,7 +58,7 @@ class Admin::LoanedBooksController < Admin::BaseController
                         t "error.quantity.not_valid"
     flash[:danger] = if quantity.negative? ||
                         quantity.zero?
-                       t "error.quantity.not_valid"
+                        t "error.quantity.not_valid"
                       else
                         t "error.quantity.over"
                       end

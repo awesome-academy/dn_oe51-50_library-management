@@ -13,6 +13,11 @@ Rails.application.routes.draw do
     delete "/login", to: "sessions#destroy"
     resources :users
 
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/login", to: "sessions#destroy"
+    resources :users
+
     namespace :admin do
       resources :books
       resources :loaned_books

@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
     redirect_to home_path
   end
 
+  include SessionsHelper
+
   private
 
   def set_locale
