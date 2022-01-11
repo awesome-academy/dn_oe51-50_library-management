@@ -1,5 +1,9 @@
 class Admin::LoanedBooksController < Admin::BaseController
-  before_action :check_valid_user, :find_book, :assign_new_loan, :check_quantity_add, :create_loan_detail, only: :create
+  before_action :check_valid_user,
+    :find_book,
+    :assign_new_loan,
+    :check_quantity_add,
+    :create_loan_detail, only: :create
 
   def new
     @loaned_book = LoanedBook.new
@@ -53,9 +57,9 @@ class Admin::LoanedBooksController < Admin::BaseController
   end
 
   def quantity_valid quantity
-    flash[:danger] = if quantity.negative? ||
+    flash[:danger] =  if quantity.negative? ||
                         quantity.zero?
-                       t "error.quantity.not_valid"
+                        t "error.quantity.not_valid"
                       else
                         t "error.quantity.over"
                       end

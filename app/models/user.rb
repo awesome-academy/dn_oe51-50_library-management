@@ -16,5 +16,14 @@ class User < ApplicationRecord
       end
       sum_loaned_book.to_i
     end
+
+  def digest string
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create string, cost: cost
   end
+end
 end
