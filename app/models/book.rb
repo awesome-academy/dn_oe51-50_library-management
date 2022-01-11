@@ -7,4 +7,5 @@ class Book < ApplicationRecord
 
   scope :books_sort_asc_by_title, -> {order(book_title: :asc)}
   scope :newest, ->{order(created_at: :desc)}
+  scope :search_by_tilte, ->(term){where("book_title LIKE ?", "%#{term}%") if term.present?}
 end

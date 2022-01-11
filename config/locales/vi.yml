@@ -1,4 +1,5 @@
 vi:
+  e-library: Thư Viện Trực Tuyến
   static_pages:
     home:
       home: Trang chủ
@@ -25,7 +26,22 @@ vi:
       publishing_house: "Nhà xuất bản"
       quantity: "Số lượng"
       year_published: "Năm xuất bản"
+  form:
+    password: Mật khẩu 
+    new_user: Chưa có tài khoản?
+    sign_up_now: Đăng ký ngay
+    enter_email: Vui lòng nhập Email
+    enter_pass: Vui lòng nhập mật khẩu 
+    account: Tài khoản
+    setting: Cài đặt
+    profile: Thông tin tài khoản
+    logout: Đăng xuất
+    users: Tất cả người dùng
+  flash:
+    invalid_email_password_combination: "Kết hợp mật khẩu email không hợp lệ!"
   book:
+      search: "Tìm kiếm"
+      input_name: "Nhập tên sách"
     show:
       homepage: "Trang chủ"
       share_text: "Chia sẻ"
@@ -37,8 +53,23 @@ vi:
       remail_quantity: "Số lượng trong kho"
       review_link: "(Xem 100 bài đánh giá)"
       number_users_read: "Đã đọc 50+"
+      quantity: "Số lượng"
+      btn_loan: "Đặt sách"
+  carts:
+    index:
+      cart: "Giỏ hàng"
+      all: "Tất cả ("
+      products: " sách)"
+      due_date: "Ngày trả"
+      quantity: "Số lượng"
+      info: "Thông tin"
+      change: "Thay đổi"
+      total_book: "Tổng sách :"
+      btn_loan: "Đặt sách"
+    cart:
+      category: "Loại sách: "
   admin:
-    book:
+    books:
       show:
         homepage: "Trang chủ"
         detail_info_title: "Thông tin chi tiết"
@@ -58,13 +89,16 @@ vi:
         date_due: "Ngày đến hạn trả :"
         quantity: "Số lượng :"
         btn_submit: "Xác nhận"
-error:
-  user_invalid: "Người dùng không hợp lệ !"
-  forbiden: "Không có quyền truy cập"
-  not_found_book: "Không tìm thấy thông tin"
-  create_loan_failure: "Tạo đơn hàng bị lỗi !"
-  quantity:
-    not_valid: "Số lượng không hợp lệ !"
-    over: "Số lượng vượt quá sách cho phép !"
-notice:
-  create_loan_success: "Tạo đơn hàng thành công"
+  error:
+    user_invalid: "Người dùng không hợp lệ !"
+    forbiden: "Không có quyền truy cập"
+    not_found_book: "Không tìm thấy thông tin"
+    create_loan_failure: "Tạo đơn hàng bị lỗi !"
+    quantity:
+      not_valid: "Số lượng không hợp lệ !"
+      over: "Số lượng vượt quá sách cho phép !"
+  notice:
+    create_loan_success: "Tạo đơn hàng thành công"
+    nothing_in_cart: "Giỏ hàng bạn đang trống"
+    please_log_in: "Vui lòng đăng nhập"
+    add_cart_success: "Thêm vào giỏ hàng thành công"
