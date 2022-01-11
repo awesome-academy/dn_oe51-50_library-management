@@ -18,3 +18,28 @@ en:
       help: Help
       contact: Contact
       log_in: Log in
+  book:
+    show:
+      homepage: "Home"
+      share_text: "Share"
+      like_text: "Like"
+      detail_info_title: "Detail infomation"
+      publishing_house: "Publishing house"
+      year_published: "Year published"
+      author: "Author"
+      remail_quantity: "Remain quantity"
+      review_link: "(Look 100 review post)"
+      number_users_read: "Read 50+"
+  admin:
+    book:
+      show:
+        homepage: "Home"
+        detail_info_title: "Detail infomation"
+        publishing_house: "Publishing house"
+        year_published: "Year published"
+        author: "Author"
+        remail_quantity: "Remain quantity"
+        review_link: "(Look 100 review post)"
+        number_users_read: "Read 50+"
+error:
+  not_found_book: "Cannot found book"
