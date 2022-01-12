@@ -18,3 +18,28 @@ vi:
       help: Trợ giúp
       contact: Liên hệ
       log_in: Đăng nhập
+  book:
+    show:
+      homepage: "Trang chủ"
+      share_text: "Chia sẻ"
+      like_text: "Thích"
+      detail_info_title: "Thông tin chi tiết"
+      publishing_house: "Nhà xuất bản"
+      year_published: "Năm xuất bản"
+      author: "Tác giả"
+      remail_quantity: "Số lượng trong kho"
+      review_link: "(Xem 100 bài đánh giá)"
+      number_users_read: "Đã đọc 50+"
+  admin:
+    book:
+      show:
+        homepage: "Trang chủ"
+        detail_info_title: "Thông tin chi tiết"
+        publishing_house: "Nhà xuất bản"
+        year_published: "Năm xuất bản"
+        author: "Tác giả"
+        remail_quantity: "Số lượng trong kho"
+        review_link: "(Xem 100 bài đánh giá)"
+        number_users_read: "Đã đọc 50+"
+error:
+  not_found_book: "Không tìm thấy thông tin"
