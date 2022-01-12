@@ -16,6 +16,17 @@
             </picture>
           </div>
         </div>
+        <div class="style__SocialShareStyle">
+          <div class="style__Text "><%= t ".share_text" %></div>
+          <%= image_tag asset_path("icons8-facebook.svg"), class: "style__Icon" %>
+          <%= image_tag asset_path("icons8-instagram.svg"), class: "style__Icon" %>
+          <%= image_tag asset_path("icons8-twitter.svg"), class: "style__Icon" %>
+          <div class="style__Sperator"></div>
+          <div class="style__LikeInfo">
+            <%= image_tag asset_path("favorite_border_black_24dp.svg"), class: "style__Icon" %>
+            <div class="style__Text"><%= t ".like_text" %></div>
+          </div>
+        </div>
       </div>
 
       <div class="style__StyledSperate sperate"></div>
@@ -82,9 +93,7 @@
                   <td><%= t ".author" %></td>
                   <td>
                     <% @authors.each do |author| %>
-                      <% if has_author? author %>
-                        - <%= author.author_name %>
-                      <% end %>
+                      - <%= author.author_name %>
                     <% end %>
                   </td>
                 </tr>

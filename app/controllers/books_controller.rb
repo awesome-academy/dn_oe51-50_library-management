@@ -1,4 +1,4 @@
-class Admin::BookController < Admin::BaseController
+class BooksController < ApplicationController
   before_action :find_book, except: :index
 
   def show
