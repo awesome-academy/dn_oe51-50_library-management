@@ -1,0 +1,19 @@
+<% provide :title, t(".books") %>
+<h1><%= t(".books") %></h1>
+
+<%== pagy_bootstrap_nav(@pagy) %>
+
+<ul class="books">
+  <li>
+    <span><%= t".book_title" %></span>
+    <span><%= t".publishing_house" %></span>
+    <span><%= t".quantity" %></span>
+    <span><%= t".year_published" %></span>
+  </li>
+</ul>
+
+<ul class="books">
+  <%= render @books %>
+</ul>
+
+<%== pagy_bootstrap_nav(@pagy) %>

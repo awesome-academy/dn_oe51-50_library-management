@@ -18,6 +18,13 @@ vi:
       help: Trợ giúp
       contact: Liên hệ
       log_in: Đăng nhập
+  books:
+    index:
+      books: "Sách"
+      book_title: "Tên sách"
+      publishing_house: "Nhà xuất bản"
+      quantity: "Số lượng"
+      year_published: "Năm xuất bản"
   book:
     show:
       homepage: "Trang chủ"
