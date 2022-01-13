@@ -48,4 +48,9 @@ textarea {
     display: grid;
     grid-template-columns: 200px 200px 200px 200px;
   }
+  form {
+    input {
+      height: 30px;
+    }
+  }
 }

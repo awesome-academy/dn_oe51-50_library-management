@@ -4,4 +4,5 @@ class Book < ApplicationRecord
   has_many :book_authorships, dependent: :destroy
   has_many :authors, through: :book_authorships
   scope :newest, ->{order(created_at: :desc)}
+  scope :search_by_tilte, ->(term){where("book_title LIKE ?", "%#{term}%") if term.present?}
 end
