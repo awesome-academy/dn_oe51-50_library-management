@@ -48,5 +48,23 @@ en:
         remail_quantity: "Remain quantity"
         review_link: "(Look 100 review post)"
         number_users_read: "Read 50+"
+    loaned_books:
+      new:
+        new_loans: "Create Loans"
+        create_new_loan: "Create new loan for books"
+        member: "Member name :"
+        loaned_book: "Choose books :"
+        date_loaned: "Date loaned :"
+        date_due: "Date due :"
+        quantity: "Quantity :"
+        btn_submit: "Submit"
 error:
+  user_invalid: "User invalid !"
+  forbiden: "Cannot access permission"
   not_found_book: "Cannot found book"
+  create_loan_failure: "Create loan failure !"
+  quantity:
+    not_valid: "Quantity invalid !"
+    over: "Quantity over permit books !"
+notice:
+  create_loan_success: "Create loan success"

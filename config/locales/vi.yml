@@ -48,5 +48,23 @@ vi:
         remail_quantity: "Số lượng trong kho"
         review_link: "(Xem 100 bài đánh giá)"
         number_users_read: "Đã đọc 50+"
+    loaned_books:
+      new:
+        new_loans: "Mượn sách"
+        create_new_loan: "Tạo đơn hàng mượn sách"
+        member: "Thành viên :"
+        loaned_book: "Chọn sách :"
+        date_loaned: "Ngày mượn :"
+        date_due: "Ngày đến hạn trả :"
+        quantity: "Số lượng :"
+        btn_submit: "Xác nhận"
 error:
+  user_invalid: "Người dùng không hợp lệ !"
+  forbiden: "Không có quyền truy cập"
   not_found_book: "Không tìm thấy thông tin"
+  create_loan_failure: "Tạo đơn hàng bị lỗi !"
+  quantity:
+    not_valid: "Số lượng không hợp lệ !"
+    over: "Số lượng vượt quá sách cho phép !"
+notice:
+  create_loan_success: "Tạo đơn hàng thành công"

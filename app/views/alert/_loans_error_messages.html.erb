@@ -1,0 +1,12 @@
+<% if @loaned_book.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <%= t(".form_contain") + pluralize(@loaned_book.errors.count, t(".error")) %>
+    </div>
+    <ul>
+      <% @loaned_book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
