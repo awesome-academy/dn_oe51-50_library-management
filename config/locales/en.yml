@@ -18,6 +18,13 @@ en:
       help: Help
       contact: Contact
       log_in: Log in
+  books:
+    index:
+      books: "Book"
+      book_title: "Book Title"
+      publishing_house: "Publishing House"
+      quantity: "Quantity"
+      year_published: "Year Published"
   book:
     show:
       homepage: "Home"

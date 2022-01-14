@@ -1,6 +1,10 @@
 class BooksController < ApplicationController
   before_action :find_book, except: :index
 
+  def index
+    @pagy, @books = pagy(Book.newest, items: Settings.pagy.digit_10)
+  end
+
   def show
     @authors = @book.authors
   end
