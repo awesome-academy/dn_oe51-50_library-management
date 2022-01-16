@@ -4,9 +4,11 @@ Rails.application.routes.draw do
     get "/help", to: "static_pages#help"
     get "/contact", to: "static_pages#contact"
     resources :books, only: %i(index show)
+    resources :loaned_books
 
     namespace :admin do
       resources :books
+      resources :loaned_books
     end
   end
 end

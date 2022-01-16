@@ -1,0 +1,32 @@
+<% provide :title, t(".new_loans") %>
+<h1 style="text-align: center;"><%= t ".create_new_loan" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with model: [:admin, @loaned_book] do |form| %>
+      <%= render "alert/loans_error_messages" %>
+
+      <%= form.label :user_name, t(".member") %>
+      <select name="loaned_book[user_id]">
+        <% get_user_memeber.each do |member| %>
+          <option value="<%= member.id %>">
+            <%= "(" + member.id.to_s + ") " + member.name %>
+          </option>
+        <% end %>
+      </select>
+
+      <%= form.label :book_title, t(".loaned_book") %>
+      <%= form.collection_select :book_id, get_books_sort_by_title, :id, :book_title, include_blank: false %>
+
+      <%= form.label :date_loaned, t(".date_loaned") %>
+      <%= form.date_field :date_loaned, value: render_time_now, class: "form-control" %>
+
+      <%= form.label :date_due, t(".date_due") %>
+      <%= form.date_field :date_due, value: render_time_date_due, class: "form-control" %>
+
+      <%= form.label :quantity, t(".quantity") %>
+      <%= form.number_field :quantity, value: Settings.df_value_qty.digit_1, in: Settings.range.digit_1..Settings.range.digit_3, step: Settings.step.digit_1, class: "form-control"%>
+
+      <%= form.submit t(".btn_submit"), class: "btn btn-primary"%>
+    <% end %>
+  </div>
+</div>

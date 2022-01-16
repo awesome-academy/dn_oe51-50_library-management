@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_07_100204) do
+ActiveRecord::Schema.define(version: 2022_01_13_111758) do
 
   create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "author_name"
@@ -63,14 +63,14 @@ ActiveRecord::Schema.define(version: 2022_01_07_100204) do
   end
 
   create_table "loaned_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "loaned_id"
+    t.bigint "loaned_book_id"
     t.bigint "book_id"
     t.integer "quantity"
     t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "fk_rails_3132f14d22"
-    t.index ["loaned_id"], name: "fk_rails_e39b9f5c48"
+    t.index ["loaned_book_id"], name: "fk_rails_e39b9f5c48"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -91,5 +91,5 @@ ActiveRecord::Schema.define(version: 2022_01_07_100204) do
   add_foreign_key "loaned_books", "users"
   add_foreign_key "loaned_books", "users"
   add_foreign_key "loaned_details", "books"
-  add_foreign_key "loaned_details", "loaned_books", column: "loaned_id"
+  add_foreign_key "loaned_details", "loaned_books"
 end
