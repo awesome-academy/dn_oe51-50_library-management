@@ -27,13 +27,6 @@ en:
       year_published: "Year Published"
       search: "Search"
       input_name: "Input name"
-  book:
-    index:
-      books: "Book"
-      book_title: "Book Title"
-      publishing_house: "Publishing House"
-      quantity: "Quantity"
-      year_published: "Year Published"
     show:
       homepage: "Home"
       share_text: "Share"
@@ -45,8 +38,10 @@ en:
       remail_quantity: "Remain quantity"
       review_link: "(Look 100 review post)"
       number_users_read: "Read 50+"
+      quantity: "Quantity"
+      btn_loan: "Order"
   admin:
-    book:
+    books:
       show:
         homepage: "Home"
         detail_info_title: "Detail infomation"
@@ -78,3 +73,4 @@ en:
     create_loan_success: "Create loan success"
     nothing_in_cart: "Nothing in your cart."
     please_log_in: "Please login"
+    add_cart_success: "Book is added in your cart"

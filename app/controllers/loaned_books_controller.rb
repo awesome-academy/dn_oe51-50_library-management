@@ -59,18 +59,4 @@ class LoanedBooksController < ApplicationController
                         t "error.quantity.over"
                       end
   end
-
-  def check_valid_user
-    return if User.is_valid_member? current_user
-
-    flash.now[:danger] = t "error.user_invalid"
-    redirect_to home_path
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    flash[:danger] = t "notice.please_log_in"
-    redirect_to login_url
-  end
 end
