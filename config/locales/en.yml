@@ -66,13 +66,15 @@ en:
         date_due: "Date due :"
         quantity: "Quantity :"
         btn_submit: "Submit"
-error:
-  user_invalid: "User invalid !"
-  forbiden: "Cannot access permission"
-  not_found_book: "Cannot found book"
-  create_loan_failure: "Create loan failure !"
-  quantity:
-    not_valid: "Quantity invalid !"
-    over: "Quantity over permit books !"
-notice:
-  create_loan_success: "Create loan success"
+  error:
+    user_invalid: "User invalid !"
+    forbiden: "Cannot access permission"
+    not_found_book: "Cannot found book"
+    create_loan_failure: "Create loan failure !"
+    quantity:
+      not_valid: "Quantity invalid !"
+      over: "Quantity over permit books !"
+  notice:
+    create_loan_success: "Create loan success"
+    nothing_in_cart: "Nothing in your cart."
+    please_log_in: "Please login"
