@@ -25,7 +25,15 @@ en:
       publishing_house: "Publishing House"
       quantity: "Quantity"
       year_published: "Year Published"
+      search: "Search"
+      input_name: "Input name"
   book:
+    index:
+      books: "Book"
+      book_title: "Book Title"
+      publishing_house: "Publishing House"
+      quantity: "Quantity"
+      year_published: "Year Published"
     show:
       homepage: "Home"
       share_text: "Share"
