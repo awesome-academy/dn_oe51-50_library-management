@@ -8,6 +8,10 @@ class CartsController < ApplicationController
     @carts = get_all_item_in_cart
   end
 
+  def index
+    @carts = get_all_item_in_cart
+  end
+
   def create
     item = find_book_in_cart @book
 
