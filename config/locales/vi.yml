@@ -27,13 +27,6 @@ vi:
       year_published: "Năm xuất bản"
       search: "Tìm kiếm"
       input_name: "Nhập tên sách"
-  book:
-    index:
-      books: "Sách"
-      book_title: "Tên sách"
-      publishing_house: "Nhà xuất bản"
-      quantity: "Số lượng"
-      year_published: "Năm xuất bản"
     show:
       homepage: "Trang chủ"
       share_text: "Chia sẻ"
@@ -45,8 +38,10 @@ vi:
       remail_quantity: "Số lượng trong kho"
       review_link: "(Xem 100 bài đánh giá)"
       number_users_read: "Đã đọc 50+"
+      quantity: "Số lượng"
+      btn_loan: "Đặt sách"
   admin:
-    book:
+    books:
       show:
         homepage: "Trang chủ"
         detail_info_title: "Thông tin chi tiết"
@@ -78,3 +73,4 @@ vi:
     create_loan_success: "Tạo đơn hàng thành công"
     nothing_in_cart: "Giỏ hàng bạn đang trống"
     please_log_in: "Vui lòng đăng nhập"
+    add_cart_success: "Thêm vào giỏ hàng thành công"
