@@ -4,6 +4,10 @@ class CartsController < ApplicationController
   before_action :logged_in_user, :check_valid_user
   before_action :find_book, :check_quantity_add, only: :create
 
+  def index
+    @carts = get_all_item_in_cart
+  end
+
   def create
     item = find_book_in_cart @book
     if item

@@ -40,6 +40,19 @@ vi:
       number_users_read: "Đã đọc 50+"
       quantity: "Số lượng"
       btn_loan: "Đặt sách"
+  carts:
+    index:
+      cart: "Giỏ hàng"
+      all: "Tất cả ("
+      products: " sách)"
+      due_date: "Ngày trả"
+      quantity: "Số lượng"
+      info: "Thông tin"
+      change: "Thay đổi"
+      total_book: "Tổng sách :"
+      btn_loan: "Đặt sách"
+    cart:
+      category: "Loại sách: "
   admin:
     books:
       show:
