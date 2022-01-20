@@ -40,6 +40,19 @@ en:
       number_users_read: "Read 50+"
       quantity: "Quantity"
       btn_loan: "Order"
+  carts:
+    index:
+      cart: "Your cart"
+      all: "All ("
+      products: " products)"
+      due_date: "Due date"
+      quantity: "Quantity"
+      info: "Infomation"
+      change: "Change"
+      total_book: "Total book :"
+      btn_loan: "Order"
+    cart:
+      category: "Category: "
   admin:
     books:
       show:
