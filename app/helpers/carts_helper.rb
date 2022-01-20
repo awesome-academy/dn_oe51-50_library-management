@@ -17,7 +17,7 @@ module CartsHelper
   end
 
   def find_book_in_cart book
-    current_cart.find{|book_id, quantity| book_id == book.id}
+    current_cart.find{|book_id, quantity| book_id == book.id.to_s}
   end
 
   def total_loan_books
