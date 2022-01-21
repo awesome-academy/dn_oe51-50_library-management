@@ -102,6 +102,16 @@ vi:
     nothing_in_cart: "Giỏ hàng bạn đang trống"
     please_log_in: "Vui lòng đăng nhập"
     add_cart_success: "Thêm vào giỏ hàng thành công"
+      show:
+        show_loans: "Tất cả đơn mượn"
+        all_loans: "Các yêu cầu mượn sách"
+        member_name: "Thành viên"
+        date_loaned: "Ngày mượn"
+        date_due: "Ngày trả"
+        quantity: "Số lượng"
+        options: "Tùy chọn"
+        delete: "Xóa"
+        accept: "Phê duyệt"
 error:
   user_invalid: "Người dùng không hợp lệ !"
   forbiden: "Không có quyền truy cập"

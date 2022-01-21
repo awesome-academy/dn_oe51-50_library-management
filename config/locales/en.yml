@@ -102,6 +102,16 @@ en:
     nothing_in_cart: "Nothing in your cart."
     please_log_in: "Please login"
     add_cart_success: "Book is added in your cart"
+      show:
+        show_loans: "All loans"
+        all_loans: "All request loan book"
+        member_name: "Name member"
+        date_loaned: "Loan date"
+        date_due: "Loan due"
+        quantity: "Quantity"
+        options: "Options"
+        delete: "Delete"
+        accept: "Accept"
 error:
   user_invalid: "User invalid !"
   forbiden: "Cannot access permission"

@@ -5,13 +5,8 @@ Rails.application.routes.draw do
     get "/contact", to: "static_pages#contact"
     
     resources :books, only: %i(index show)
-    resources :loaned_books
     resources :carts, except: %i(new show edit)
-
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
-    delete "/login", to: "sessions#destroy"
-    resources :users
+    resources :loaned_books, only: %i(index show)
 
     namespace :admin do
       resources :books
