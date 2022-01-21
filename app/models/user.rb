@@ -16,6 +16,7 @@ class User < ApplicationRecord
       end
       sum_loaned_book.to_i
     end
+  end
 
   def digest string
     cost = if ActiveModel::SecurePassword.min_cost

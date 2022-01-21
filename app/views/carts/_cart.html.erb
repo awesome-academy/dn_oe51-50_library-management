@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row item">
   <div class="col-md-4">
     <div class="intended__images">
       <div class="intended__checkbox">
@@ -26,12 +26,14 @@
   </div>
   <div class="col-md-2">
     <div class="intended-qty">
-      <div class="style__StyledIntendedQty">
+      <div class="style__StyledIntendedQty ct-quant">
         <span class="glyphicon-minus qty-decrease" aria-hidden="true"></span>
         </span>
         <input
           class="qty-input"
           type="tel"
+          name="quant"
+          disabled
           value="<%= item.second %>"
         />
         <span class="glyphicon-plus qty-increase" aria-hidden="true"></span>

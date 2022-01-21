@@ -26,20 +26,6 @@ vi:
       publishing_house: "Nhà xuất bản"
       quantity: "Số lượng"
       year_published: "Năm xuất bản"
-  form:
-    password: Mật khẩu 
-    new_user: Chưa có tài khoản?
-    sign_up_now: Đăng ký ngay
-    enter_email: Vui lòng nhập Email
-    enter_pass: Vui lòng nhập mật khẩu 
-    account: Tài khoản
-    setting: Cài đặt
-    profile: Thông tin tài khoản
-    logout: Đăng xuất
-    users: Tất cả người dùng
-  flash:
-    invalid_email_password_combination: "Kết hợp mật khẩu email không hợp lệ!"
-  book:
       search: "Tìm kiếm"
       input_name: "Nhập tên sách"
     show:
@@ -55,6 +41,19 @@ vi:
       number_users_read: "Đã đọc 50+"
       quantity: "Số lượng"
       btn_loan: "Đặt sách"
+  form:
+    password: Mật khẩu
+    new_user: Chưa có tài khoản?
+    sign_up_now: Đăng ký ngay
+    enter_email: Vui lòng nhập Email
+    enter_pass: Vui lòng nhập mật khẩu
+    account: Tài khoản
+    setting: Cài đặt
+    profile: Thông tin tài khoản
+    logout: Đăng xuất
+    users: Tất cả người dùng
+  flash:
+    invalid_email_password_combination: "Kết hợp mật khẩu email không hợp lệ!"
   carts:
     index:
       cart: "Giỏ hàng"
