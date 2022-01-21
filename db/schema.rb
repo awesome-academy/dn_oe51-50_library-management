@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_01_13_111758) do
 
-  create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "authors", force: :cascade do |t|
     t.string "author_name"
     t.date "date_birth"
     t.date "date_death"
@@ -20,16 +20,14 @@ ActiveRecord::Schema.define(version: 2022_01_13_111758) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "book_authorships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "book_id"
+  create_table "book_authorships", force: :cascade do |t|
+    t.integer "book_id"
     t.bigint "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["author_id"], name: "fk_rails_1e947938d4"
-    t.index ["book_id"], name: "fk_rails_3882de3c79"
   end
 
-  create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "books", force: :cascade do |t|
     t.bigint "category_id"
     t.string "book_title"
     t.string "isbn"
@@ -39,18 +37,17 @@ ActiveRecord::Schema.define(version: 2022_01_13_111758) do
     t.string "publishing_house"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "fk_rails_1e86d9c4ec"
   end
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "category_name"
     t.integer "parent_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "loaned_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "user_id"
+  create_table "loaned_books", force: :cascade do |t|
+    t.integer "user_id"
     t.datetime "date_loaned"
     t.datetime "date_due"
     t.datetime "date_returned"
@@ -59,11 +56,12 @@ ActiveRecord::Schema.define(version: 2022_01_13_111758) do
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "fk_rails_33f71c8e2a"
   end
 
   create_table "loaned_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "loaned_book_id"
+  create_table "loaned_details", force: :cascade do |t|
+    t.integer "loaned_id"
     t.bigint "book_id"
     t.integer "quantity"
     t.integer "status", default: 0
@@ -73,7 +71,7 @@ ActiveRecord::Schema.define(version: 2022_01_13_111758) do
     t.index ["loaned_book_id"], name: "fk_rails_e39b9f5c48"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.integer "role", default: 2
     t.string "name"
     t.string "address"
