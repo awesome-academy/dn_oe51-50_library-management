@@ -1,4 +1,5 @@
 en:
+  e-library: E - Library
   static_pages:
     home:
       home: Home
@@ -25,6 +26,20 @@ en:
       publishing_house: "Publishing House"
       quantity: "Quantity"
       year_published: "Year Published"
+  form:
+    password: Password
+    new_user: New user?
+    sign_up_now: Sign up now!
+    enter_email: Enter your email
+    enter_pass: Enter your password
+    account: Account
+    profile: Profile
+    setting: Settings
+    logout: Log out
+    users: Users
+  flash:
+    invalid_email_password_combination: "Invalid email password combination!"
+  book:
       search: "Search"
       input_name: "Input name"
     show:

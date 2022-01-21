@@ -3,9 +3,15 @@ Rails.application.routes.draw do
     get "/home", to: "static_pages#home"
     get "/help", to: "static_pages#help"
     get "/contact", to: "static_pages#contact"
+    
     resources :books, only: %i(index show)
     resources :loaned_books
     resources :carts, except: %i(new show edit)
+
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/login", to: "sessions#destroy"
+    resources :users
 
     namespace :admin do
       resources :books

@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend, SessionsHelper
   before_action :set_locale
 
+  protect_from_forgery with: :exception
+
   def logged_in_user
     return if logged_in?
 
