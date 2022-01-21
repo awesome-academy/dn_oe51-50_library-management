@@ -18,10 +18,10 @@ class LoanedBooksController < ApplicationController
   private
 
   def create_loan_detail
-    @carts.each do |item|
+    @carts.each do |book, quantity|
       @loaned_book.loaned_details.build(
-        book_id: item[:book].id,
-        quantity: item[:quantity]
+        book_id: book.id,
+        quantity: quantity
       )
     end
   end
@@ -44,19 +44,23 @@ class LoanedBooksController < ApplicationController
 
   def check_quantity_add
     @quantity = total_loan_books
-    temp_total_loan = @quantity + User.get_total_loaned_books(current_user)
-    return if temp_total_loan <= Settings.limit_loans.maximum
 
-    quantity_valid @quantity
-    render :new
+    check_params_quantity_valid
+    check_stock_quantity_valid
   end
 
-  def quantity_valid quantity
-    flash[:danger] = if quantity.negative? ||
-                        quantity.zero?
-                       t "error.quantity.not_valid"
-                      else
-                        t "error.quantity.over"
-                      end
+  def check_params_quantity_valid
+    return unless @quantity.negative? || @quantity.zero?
+
+    flash[:danger] = t "error.quantity.not_valid"
+    redirect_to carts_path
+  end
+
+  def check_stock_quantity_valid
+    temp_total_loan = @quantity + User.get_total_loaned_books(current_user)
+    return unless temp_total_loan > Settings.limit_loans.maximum
+
+    flash[:danger] = t "error.quantity.over"
+    redirect_to carts_path
   end
 end
