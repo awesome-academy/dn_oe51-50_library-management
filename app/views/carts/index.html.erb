@@ -1,0 +1,67 @@
+<main>
+  <div class="container-cart">
+    <div class="style__StyledCartPage">
+      <div class="wrap-intended-cart">
+        <div class="cart">
+          <div class="cart-inner">
+            <div class="style__StyledProductsV2">
+              <p class="productsV2__title"><%= t ".cart" %></h4>
+              <div class="productsV2__heading">
+                <div class="row">
+                  <div class="col-md-4"><%= t(".all") << @carts.length.to_s << t(".products") %></div>
+                  <div class="col-md-3"><%= t ".due_date" %></div>
+                  <div class="col-md-2"><%= t ".quantity" %></div>
+                  <div class="col-md-2">
+                    <span class="glyphicon glyphicon-trash productsV2__remove-all"></span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="infinitive-scroll-component"
+                  style="height: auto; overflow: auto"
+                >
+                  <div class="style__StyledIntendedSeller">
+                    <div class="sellers">
+                      <div class="style__StyledIntended">
+                        <div class="style__StyledIntendedProduct">
+                          <%= render partial: "cart", collection: @carts, as: :item %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-info">
+            <div class="cart-info__inner">
+              <div class="style__StyledUserInfo">
+                <p class="heading">
+                  <span class="text"><%= t ".info" %></span>
+                  <span class="link"><%= t ".change" %></span>
+                </p>
+                <p class="title">
+                  <b class="name"><%= current_user.name %></b>
+                  <b class="phone"><%= current_user.phone_number %></b>
+                </p>
+                <p class="address"><%= current_user.address %></p>
+              </div>
+              <div class="style__StyledCartSum">
+                <div class="sum">
+                  <ul class="sum__items">
+                    <li class="sum__item">
+                      <span class="sum__text"><%= t ".total_book" %></span>
+                      <span class="sum__value"><%= total_loan_books %></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <%= button_to t(".btn_loan"), loaned_books_path, class: "cart__submit", method: :post %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

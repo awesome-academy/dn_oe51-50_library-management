@@ -1,0 +1,133 @@
+<main>
+  <div class="category-tree">
+        <div class="breadcrumb">
+          <%= link_to t(".homepage"), home_path, class: "breadcrumb-item" %>
+          <span class="material-icons icon icon-next">navigate_next</span>
+          <%= link_to @book.book_title, "#", class: "breadcrumb-item" %>
+        </div>
+      </div>
+      <div class="container">
+    <div class="style__Wrapper">
+      <div class="style__ProductImageStyle">
+        <div class="group-images">
+          <div class="container-images">
+            <picture>
+              <%= image_tag asset_path("thumbnail.jpg") %>
+            </picture>
+          </div>
+        </div>
+        <div class="style__SocialShareStyle">
+          <div class="style__Text "><%= t ".share_text" %></div>
+          <%= image_tag asset_path("icons8-facebook.svg"), class: "style__Icon" %>
+          <%= image_tag asset_path("icons8-instagram.svg"), class: "style__Icon" %>
+          <%= image_tag asset_path("icons8-twitter.svg"), class: "style__Icon" %>
+          <div class="style__Sperator"></div>
+          <div class="style__LikeInfo">
+            <%= image_tag asset_path("favorite_border_black_24dp.svg"), class: "style__Icon" %>
+            <div class="style__Text"><%= t ".like_text" %></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="style__StyledSperate sperate"></div>
+
+      <div class="style__StyleProductContent">
+        <div class="header">
+          <div class="brand">
+            <!-- Updating -->
+            <div class="bestseller"></div>
+          </div>
+          <h1 class="title"><%= @book.book_title %></h1>
+          <div class="below-title">
+            <div class="style__StyledReview">
+              <div style="display: flex;">
+                <div style="position: relative;">
+                      <!-- Rate start . status: Updating -->
+                  <div style="display: flex; align-items: center;">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="16" color="#fdd836" style="color: rgb(253, 216, 54);" height="16" width="16">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                    </svg>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="16" color="#fdd836" style="color: rgb(253, 216, 54);" height="16" width="16">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                    </svg>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="16" color="#fdd836" style="color: rgb(253, 216, 54);" height="16" width="16">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                    </svg>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="16" color="#fdd836" style="color: rgb(253, 216, 54);" height="16" width="16">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Updating -->
+              <a class="number" data-view-id=""><%= t ".review_link" %></a>
+              <div class="style__BelowTitleSperator"></div>
+            </div>
+            <!-- Updating -->
+            <div class="style__StyledQuantityRead"><%= t ".number_users_read" %></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="content descrip">
+            <p><%= @book.description %></p>
+            <div class="style__StyleAddLoanBook">
+              <div class="qty-and-message">
+                <div class="QuantityInput__Wrapper">
+                  <p class="label"><%= t ".quantity" %></p>
+                  <div class="group-input">
+                    <button>
+                      <span class="glyphicon glyphicon-minus" aria-hidden="true" width="20" height="20"></span>
+                    </button>
+                    <input class="input" type="text" value="1" />
+                    <button>
+                      <span class="glyphicon glyphicon-plus" aria-hidden="true" width="20" height="20"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="group-button">
+                <%= button_to t(".btn_loan"), carts_path(id: @book.id, quantity: 1), class: "btn-add-to-cart", method: :post %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex;">
+      <div class="left">
+        <div class="group">
+              <h4 class="BlockTitle__Wrapper"><%= t ".detail_info_title" %></h4>
+          <div class="content has-table">
+            <table>
+              <tbody>
+                <tr>
+                  <td><%= t ".publishing_house" %></td>
+                  <td><%= @book.publishing_house %></td>
+                </tr>
+                <tr>
+                  <td><%= t ".year_published" %></td>
+                  <td><%= @book.year_published %></td>
+                </tr>
+                <tr>
+                  <td><%= t ".author" %></td>
+                  <td>
+                    <% @authors.each do |author| %>
+                      - <%= author.author_name %>
+                    <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td><%= t ".remail_quantity" %></td>
+                  <td><%= @book.quantity %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="style_RecommendBook"></div>
+      </div>
+    </div>
+  </div>
+</main>

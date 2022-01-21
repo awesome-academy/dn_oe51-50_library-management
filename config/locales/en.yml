@@ -18,3 +18,72 @@ en:
       help: Help
       contact: Contact
       log_in: Log in
+  books:
+    index:
+      books: "Book"
+      book_title: "Book Title"
+      publishing_house: "Publishing House"
+      quantity: "Quantity"
+      year_published: "Year Published"
+      search: "Search"
+      input_name: "Input name"
+    show:
+      homepage: "Home"
+      share_text: "Share"
+      like_text: "Like"
+      detail_info_title: "Detail infomation"
+      publishing_house: "Publishing house"
+      year_published: "Year published"
+      author: "Author"
+      remail_quantity: "Remain quantity"
+      review_link: "(Look 100 review post)"
+      number_users_read: "Read 50+"
+      quantity: "Quantity"
+      btn_loan: "Order"
+  carts:
+    index:
+      cart: "Your cart"
+      all: "All ("
+      products: " products)"
+      due_date: "Due date"
+      quantity: "Quantity"
+      info: "Infomation"
+      change: "Change"
+      total_book: "Total book :"
+      btn_loan: "Order"
+    cart:
+      category: "Category: "
+  admin:
+    books:
+      show:
+        homepage: "Home"
+        detail_info_title: "Detail infomation"
+        publishing_house: "Publishing house"
+        year_published: "Year published"
+        author: "Author"
+        remail_quantity: "Remain quantity"
+        review_link: "(Look 100 review post)"
+        number_users_read: "Read 50+"
+    loaned_books:
+      new:
+        new_loans: "Create Loans"
+        create_new_loan: "Create new loan for books"
+        member: "Member name :"
+        loaned_book: "Choose books :"
+        date_loaned: "Date loaned :"
+        date_due: "Date due :"
+        quantity: "Quantity :"
+        btn_submit: "Submit"
+  error:
+    user_invalid: "User invalid !"
+    forbiden: "Cannot access permission"
+    not_found_book: "Cannot found book"
+    create_loan_failure: "Create loan failure !"
+    quantity:
+      not_valid: "Quantity invalid !"
+      over: "Quantity over permit books !"
+  notice:
+    create_loan_success: "Create loan success"
+    nothing_in_cart: "Nothing in your cart."
+    please_log_in: "Please login"
+    add_cart_success: "Book is added in your cart"
