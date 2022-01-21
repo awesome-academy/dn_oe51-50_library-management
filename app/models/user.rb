@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_many :loaned_books
   has_many :loaned_details, through: :loaned_books
+  has_secure_password
 
   class << self
     def is_valid_member? user
@@ -17,12 +18,13 @@ class User < ApplicationRecord
       sum_loaned_book.to_i
     end
 
-  def digest string
-    cost = if ActiveModel::SecurePassword.min_cost
-             BCrypt::Engine::MIN_COST
-           else
-             BCrypt::Engine.cost
-           end
-    BCrypt::Password.create string, cost: cost
+    def digest string
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
+      BCrypt::Password.create string, cost: cost
+    end
   end
 end
