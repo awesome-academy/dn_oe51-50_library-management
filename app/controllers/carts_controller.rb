@@ -3,6 +3,7 @@ class CartsController < ApplicationController
 
   before_action :logged_in_user, :check_valid_user
   before_action :find_book, only: :create
+  before_action :check_key_in_cart, only: :destroy
 
   def index
     @carts = get_all_item_in_cart
@@ -15,6 +16,13 @@ class CartsController < ApplicationController
     redirect_to book_path(@book)
   end
 
+  def destroy
+    current_cart.delete params[:id]
+
+    flash[:success] = t "notice.del_success"
+    redirect_to carts_path
+  end
+
   private
 
   def find_book
@@ -23,6 +31,13 @@ class CartsController < ApplicationController
 
     flash.now[:danger] = t "error.not_found_book"
     redirect_to home_path
+  end
+
+  def check_key_in_cart
+    return if current_cart.key? params[:id].to_s
+
+    flash[:danger] = t "error.not_found_in_cart"
+    redirect_to carts_path
   end
 
   def check_quantity_add item
