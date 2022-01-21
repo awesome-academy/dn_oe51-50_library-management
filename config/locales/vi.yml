@@ -1,5 +1,16 @@
 vi:
   e-library: Thư Viện Trực Tuyến
+  title:
+    password: Mật khẩu 
+    new_user: Chưa có tài khoản?
+    sign_up_now: Đăng ký ngay
+    enter_email: Vui lòng nhập Email
+    enter_pass: Vui lòng nhập mật khẩu 
+    account: Tài khoản
+    setting: Cài đặt
+    profile: Thông tin tài khoản
+    logout: Đăng xuất
+    users: Tất cả người dùng
   static_pages:
     home:
       home: Trang chủ
@@ -26,22 +37,11 @@ vi:
       publishing_house: "Nhà xuất bản"
       quantity: "Số lượng"
       year_published: "Năm xuất bản"
-  form:
-    password: Mật khẩu 
-    new_user: Chưa có tài khoản?
-    sign_up_now: Đăng ký ngay
-    enter_email: Vui lòng nhập Email
-    enter_pass: Vui lòng nhập mật khẩu 
-    account: Tài khoản
-    setting: Cài đặt
-    profile: Thông tin tài khoản
-    logout: Đăng xuất
-    users: Tất cả người dùng
   flash:
     invalid_email_password_combination: "Kết hợp mật khẩu email không hợp lệ!"
   book:
-      search: "Tìm kiếm"
-      input_name: "Nhập tên sách"
+    search: "Tìm kiếm"
+    input_name: "Nhập tên sách"
     show:
       homepage: "Trang chủ"
       share_text: "Chia sẻ"
@@ -89,6 +89,16 @@ vi:
         date_due: "Ngày đến hạn trả :"
         quantity: "Số lượng :"
         btn_submit: "Xác nhận"
+      index:
+        show_loans: "Tất cả đơn mượn"
+        all_loans: "Các yêu cầu mượn sách"
+        member_name: "Thành viên"
+        date_loaned: "Ngày mượn"
+        date_due: "Ngày trả"
+        quantity: "Số lượng"
+        options: "Tùy chọn"
+        delete: "Xóa"
+        accept: "Phê duyệt"
   error:
     user_invalid: "Người dùng không hợp lệ !"
     forbiden: "Không có quyền truy cập"
@@ -104,3 +114,10 @@ vi:
     please_log_in: "Vui lòng đăng nhập"
     add_cart_success: "Thêm vào giỏ hàng thành công"
     del_success: "Xóa thành công"
+  views:
+    pagination:
+      first: "« Trang đầu"
+      last: "Trang cuối »"
+      previous: "‹ Trang trước"
+      next: "Trang sau ›"
+      truncate: "…"
