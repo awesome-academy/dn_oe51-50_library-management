@@ -42,6 +42,15 @@ vi:
   book:
       search: "Tìm kiếm"
       input_name: "Nhập tên sách"
+  book:
+    index:
+      books: "Sách"
+      book_title: "Tên sách"
+      publishing_house: "Nhà xuất bản"
+      quantity: "Số lượng"
+      year_published: "Năm xuất bản"
+      search: "Tìm kiếm"
+      input_name: "Nhập tên"
     show:
       homepage: "Trang chủ"
       share_text: "Chia sẻ"
@@ -104,3 +113,15 @@ vi:
     please_log_in: "Vui lòng đăng nhập"
     add_cart_success: "Thêm vào giỏ hàng thành công"
     del_success: "Xóa thành công"
+    not_found_user: Không tìm thấy người dùng
+  loaned_books:
+    index:
+      loaned_books: Sách đã mượn
+      date_loaned: Ngày cho mượn
+      date_due: Ngày đến hạn trả
+      date_returned: Ngày trả lại
+      quantity: Số lượng
+      nil_loaned_books: Bạn chưa mượn bất kỳ cuốn sách nào
+  time:
+    formats:
+      default: "%d %B %Y, %H:%M:%S"

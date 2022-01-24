@@ -1,0 +1,20 @@
+<% provide :title, t(".loaned_books") %>
+<h1><%= t(".loaned_books") %></h1>
+
+<%== pagy_bootstrap_nav(@pagy) %>
+
+<% if @loaned_books.count>0 %>
+  <ul class="books">
+    <li>
+      <span><%= t ".date_loaned" %></span>
+      <span><%= t ".date_due" %></span>
+      <span><%= t ".date_returned" %></span>
+      <span><%= t ".quantity" %></span>
+    </li>
+  </ul>
+  <%= render @loaned_books %>
+<% else %>
+  <%= t ".nil_loaned_books" %>
+<% end %>
+
+<%== pagy_bootstrap_nav(@pagy) %>

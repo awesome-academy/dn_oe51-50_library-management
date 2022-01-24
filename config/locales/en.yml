@@ -42,6 +42,15 @@ en:
   book:
       search: "Search"
       input_name: "Input name"
+  book:
+    index:
+      books: "Book"
+      book_title: "Book Title"
+      publishing_house: "Publishing House"
+      quantity: "Quantity"
+      year_published: "Year Published"
+      search: "Search"
+      input_name: "Input name"
     show:
       homepage: "Home"
       share_text: "Share"
@@ -104,3 +113,15 @@ en:
     please_log_in: "Please login"
     add_cart_success: "Book is added in your cart"
     del_success: "Deleted success"
+    not_found_user: Not found user
+  loaned_books:
+    index:
+      loaned_books: Loaned Books
+      date_loaned: Date Loaned
+      date_due: Date Due
+      date_returned: Date Returned
+      quantity: Quantity
+      nil_loaned_books: You haven't borrowed any books yet
+  time:
+    formats:
+      default: "%d %B %Y, %H:%M:%S"
