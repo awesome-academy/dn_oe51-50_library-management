@@ -93,6 +93,7 @@ vi:
     user_invalid: "Người dùng không hợp lệ !"
     forbiden: "Không có quyền truy cập"
     not_found_book: "Không tìm thấy thông tin"
+    not_found_in_cart: "Không tìm thấy trong giỏ hàng"
     create_loan_failure: "Tạo đơn hàng bị lỗi !"
     quantity:
       not_valid: "Số lượng không hợp lệ !"
@@ -102,3 +103,4 @@ vi:
     nothing_in_cart: "Giỏ hàng bạn đang trống"
     please_log_in: "Vui lòng đăng nhập"
     add_cart_success: "Thêm vào giỏ hàng thành công"
+    del_success: "Xóa thành công"
