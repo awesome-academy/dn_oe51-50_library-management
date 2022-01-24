@@ -1,4 +1,5 @@
 vi:
+  e-library: Thư Viện Trực Tuyến
   static_pages:
     home:
       home: Trang chủ
@@ -25,6 +26,20 @@ vi:
       publishing_house: "Nhà xuất bản"
       quantity: "Số lượng"
       year_published: "Năm xuất bản"
+  form:
+    password: Mật khẩu 
+    new_user: Chưa có tài khoản?
+    sign_up_now: Đăng ký ngay
+    enter_email: Vui lòng nhập Email
+    enter_pass: Vui lòng nhập mật khẩu 
+    account: Tài khoản
+    setting: Cài đặt
+    profile: Thông tin tài khoản
+    logout: Đăng xuất
+    users: Tất cả người dùng
+  flash:
+    invalid_email_password_combination: "Kết hợp mật khẩu email không hợp lệ!"
+  book:
       search: "Tìm kiếm"
       input_name: "Nhập tên sách"
     show:
