@@ -5,16 +5,16 @@
     <%= form_for(:session, url: login_path) do |f| %>
       <div class="form-group">
         <%= f.label :email %>
-        <%= f.email_field :email, placeholder: t("form.enter_email"), class: "form-control" %>
+        <%= f.email_field :email, placeholder: t("title.enter_email"), class: "form-control" %>
       </div>
       <div class="form-group">
-        <%= f.label :password, t("form.password") %>
-        <%= f.password_field :password, placeholder: t("form.enter_pass"), class: "form-control" %>
+        <%= f.label :password, t("title.password") %>
+        <%= f.password_field :password, placeholder: t("title.enter_pass"), class: "form-control" %>
       </div>
       <div class="text-center">
         <%= f.submit t("layouts.header.log_in"), class: "btn btn-primary" %>
       </div>
     <% end %>
-    <p><%= t "form.new_user" %> <%= link_to t("form.sign_up_now"), "#" %></p>
+    <p><%= t "form.new_user" %> <%= link_to t("title.sign_up_now"), "#" %></p>
   </div>
 </div>

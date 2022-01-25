@@ -1,0 +1,20 @@
+<% provide :title, t(".show_loans") %>
+<h1 style="text-align: center;"><%= t ".all_loans" %></h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><%= t ".member_name" %></th>
+      <th scope="col"><%= t ".date_loaned" %></th>
+      <th scope="col"><%= t ".date_due" %></th>
+      <th scope="col"><%= t ".quantity" %></th>
+      <th scope="col"><%= t ".options" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @loaned_books %>
+  </tbody>
+</table>
+
+<%= will_paginate %>

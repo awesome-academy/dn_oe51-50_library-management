@@ -1,0 +1,15 @@
+<% get_user_memeber.each do |member| %>
+<tr>
+  <th scope="row"><%= member.id %></th>
+  <td><%= member.name %></td>
+  <td><%= l(loaned_book.date_loaned, format: :short) %></td>
+  <td><%= l(loaned_book.date_due, format: :long) %></td>
+  <td><%= loaned_book.quantity %></td>
+  <td>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary"><%= t ".delele" %></button>
+      <button type="button" class="btn btn-secondary"><%= t ".accept" %></button>
+    </div>
+  </td>
+</tr>
+<% end %>

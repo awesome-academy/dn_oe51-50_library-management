@@ -1,5 +1,27 @@
 en:
   e-library: E - Library
+  title:
+    password: Mật khẩu 
+    new_user: Chưa có tài khoản?
+    sign_up_now: Đăng ký ngay
+    enter_email: Vui lòng nhập Email
+    enter_pass: Vui lòng nhập mật khẩu 
+    account: Tài khoản
+    setting: Cài đặt
+    profile: Thông tin tài khoản
+    logout: Đăng xuất
+    users: Tất cả người dùng
+  title:
+    password: Password
+    new_user: New user?
+    sign_up_now: Sign up now!
+    enter_email: Enter your email
+    enter_pass: Enter your password
+    account: Account
+    profile: Profile
+    setting: Settings
+    logout: Log out
+    users: Users
   static_pages:
     home:
       home: Home
@@ -26,22 +48,11 @@ en:
       publishing_house: "Publishing House"
       quantity: "Quantity"
       year_published: "Year Published"
-  form:
-    password: Password
-    new_user: New user?
-    sign_up_now: Sign up now!
-    enter_email: Enter your email
-    enter_pass: Enter your password
-    account: Account
-    profile: Profile
-    setting: Settings
-    logout: Log out
-    users: Users
   flash:
     invalid_email_password_combination: "Invalid email password combination!"
   book:
-      search: "Search"
-      input_name: "Input name"
+    search: "Search"
+    input_name: "Input name"
     show:
       homepage: "Home"
       share_text: "Share"
@@ -89,6 +100,16 @@ en:
         date_due: "Date due :"
         quantity: "Quantity :"
         btn_submit: "Submit"
+      index:
+        show_loans: "All loans"
+        all_loans: "All request loan book"
+        member_name: "Name member"
+        date_loaned: "Loan date"
+        date_due: "Loan due"
+        quantity: "Quantity"
+        options: "Options"
+        delete: "Delete"
+        accept: "Accept"
   error:
     user_invalid: "User invalid !"
     forbiden: "Cannot access permission"
@@ -104,3 +125,16 @@ en:
     please_log_in: "Please login"
     add_cart_success: "Book is added in your cart"
     del_success: "Deleted success"
+  views:
+    pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
+      truncate: "…"
+  time:
+    formats:
+      own: "%H:%M:%S, %d %B"
+      default: "%d-%m-%Y"
+      long: "%d %B, %Y"
+      short: "%d %b"
