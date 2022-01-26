@@ -3,7 +3,9 @@ class CartsController < ApplicationController
 
   before_action :logged_in_user, :check_valid_user
   before_action :find_book, only: :create
-  before_action :check_key_in_cart, only: :destroy
+  before_action :check_key_in_cart, only: %i(destroy update)
+  before_action :check_quantity_update, only: :update
+  skip_before_action :verify_authenticity_token, only: :update
 
   def index
     @carts = get_all_item_in_cart
@@ -21,6 +23,10 @@ class CartsController < ApplicationController
 
     flash[:success] = t "notice.del_success"
     redirect_to carts_path
+  end
+
+  def update
+    current_cart[params[:id].to_s] = params[:quantity].to_i
   end
 
   private
@@ -58,5 +64,17 @@ class CartsController < ApplicationController
       session[:cart] = current_cart
       flash[:success] = t "notice.add_cart_success"
     end
+  end
+
+  def check_quantity_update
+    qty_item_update_in_cart = current_cart[params[:id].to_s].to_i
+    # Get total quantity in carts when request update
+    @quantity = total_loan_books - qty_item_update_in_cart + params[:quantity].to_i
+    temp_total_loan = @quantity + User.get_total_loaned_books(current_user)
+
+    return unless temp_total_loan > Settings.limit_loans.maximum
+
+    flash[:danger] = t "error.quantity.over"
+    redirect_to carts_path
   end
 end

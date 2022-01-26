@@ -24,7 +24,7 @@
                   <div class="style__StyledIntendedSeller">
                     <div class="sellers">
                       <div class="style__StyledIntended">
-                        <div class="style__StyledIntendedProduct">
+                        <div class="style__StyledIntendedProduct" id="ct-pd" >
                           <%= render partial: "cart", collection: @carts, as: :item %>
                         </div>
                       </div>
@@ -65,3 +65,4 @@
     </div>
   </div>
 </main>
+<%= javascript_pack_tag 'cart' %>

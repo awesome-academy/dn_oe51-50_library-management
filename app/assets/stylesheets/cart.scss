@@ -1,4 +1,4 @@
-@import 'color';
+@import "color";
 
 html {
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -349,6 +349,13 @@ a {
     .qty-increase {
       border-right: medium none;
       border-left: 1px solid $gray_78;
+    }
+
+    .glyphicon-minus,
+    .glyphicon-plus {
+      &:hover {
+        color: $gray_14;
+      }
     }
   }
 }
