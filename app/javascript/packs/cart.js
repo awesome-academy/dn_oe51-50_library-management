@@ -34,8 +34,4 @@ function updateQty(id, qty) {
     data: { id: id + 1, quantity: qty },
     type: "PATCH",
   })
-    .done(function (data) {
-    })
-    .fail(function () {
-    });
 }

@@ -1,5 +1,5 @@
 class LoanedBook < ApplicationRecord
-  enum status: {rending: 0, returned: 1 , overdated: 2}
+  enum status: {rending: 0, returned: 1, overdated: 2, pending: 3, rejected: 4, closed: 5}
 
   belongs_to :user
   has_many :loaned_details, dependent: :destroy
