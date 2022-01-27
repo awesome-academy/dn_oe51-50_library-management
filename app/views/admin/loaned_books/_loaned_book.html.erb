@@ -1,4 +1,4 @@
-<tr>
+<tr data-id=<%= loaned_book.id %>>
   <th scope="row"><%= loaned_book.user_id %></th>
   <td><%= loaned_book.user.name %></td>
   <td><%= l(loaned_book.date_loaned, format: :short) %></td>
@@ -19,8 +19,8 @@
   </td>
   <td>
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-secondary" style="border-radius: 12px 0 0 12px;"><%= t ".delete" %></button>
-      <button type="button" class="btn btn-secondary" style="border-radius: 0 12px 12px 0;"><%= t ".accept" %></button>
+      <button type="button" class="btn btn-secondary btn-reject" style="border-radius: 12px 0 0 12px;"><%= t ".delete" %></button>
+      <button type="button" class="btn btn-secondary btn-accept" style="border-radius: 0 12px 12px 0;"><%= t ".accept" %></button>
     </div>
   </td>
   <td><a href="#"><%= t ".show_detail" %></a></td>

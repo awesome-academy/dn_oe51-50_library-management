@@ -106,7 +106,11 @@ vi:
     forbiden: "Không có quyền truy cập"
     not_found_book: "Không tìm thấy thông tin"
     not_found_in_cart: "Không tìm thấy trong giỏ hàng"
+    not_found_loans: "Không tìm thấy đơn sách này"
+    not_found_loans_detail: "Không tìm thấy sách trong đơn này"
     create_loan_failure: "Tạo đơn hàng bị lỗi !"
+    cannot_update_status: "Không thể cập nhập trạng thái !"
+    status_not_exist: "Trạng thái này không tồn tại !"
     quantity:
       not_valid: "Số lượng không hợp lệ !"
       over: "Số lượng vượt quá sách cho phép !"

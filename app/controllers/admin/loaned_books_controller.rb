@@ -1,5 +1,8 @@
 class Admin::LoanedBooksController < Admin::BaseController
+  include LoanedBooksHelper
   before_action :check_valid_user, :find_book, :assign_new_loan, :check_quantity_add, :create_loan_detail, only: :create
+  before_action :load_loaned_book_update, :check_status_params, only: :update_status
+  skip_before_action :verify_authenticity_token, only: :update_status
 
   def index
     loaned_books = LoanedBook.newest
@@ -19,6 +22,16 @@ class Admin::LoanedBooksController < Admin::BaseController
   rescue ActiveRecord::RecordInvalid
     flash.now[:danger] = t "error.create_loan_failure"
     render :new
+  end
+
+  def update_status
+    ActiveRecord::Base.transaction do
+      @loaned_book.update!(status: params[:status].to_i)
+      update_status_loaned_detail params[:status].to_i
+      update_date_returned if params[:status].to_i == arr_status_loaned[:returned]
+    end
+    rescue ActiveRecord::RecordInvalid
+      render json: {error: I18n.t("error.cannot_update_status")}
   end
 
   private
@@ -73,4 +86,27 @@ class Admin::LoanedBooksController < Admin::BaseController
     flash.now[:danger] = t "error.user_invalid"
     render :new
   end
+
+  def check_status_params
+    status_value = LoanedBook.statuses.values
+    return if status_value.include?(params[:status].to_i)
+
+    render json: {error: I18n.t("error.status_not_exist")}
+  end
+
+  def update_status_loaned_detail params
+    @loaned_book.loaned_details.each {|loan_detail| loan_detail.update!(status: params) unless loan_detail.closed?}
+  end
+
+  def update_date_returned
+    @loaned_book.update!(date_returned: Time.now)
+  end
+
+  def load_loaned_book_update
+    @loaned_book = LoanedBook.find_by id: params[:id]
+    return if @loaned_book
+
+    render json: {error: I18n.t("error.not_found_loans")}
+  end
+
 end
