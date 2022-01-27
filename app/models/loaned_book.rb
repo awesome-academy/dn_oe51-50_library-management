@@ -8,6 +8,8 @@ class LoanedBook < ApplicationRecord
   has_many :loaned_details, dependent: :destroy
   has_many :books, through: :loaned_details
 
+  scope :newest, ->{order(created_at: :desc)}
+
   LOAN_ATS = %w(user_id date_loaned date_due quantity).freeze
 
   validates :user_id,

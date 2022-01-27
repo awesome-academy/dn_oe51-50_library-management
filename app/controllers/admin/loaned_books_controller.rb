@@ -1,6 +1,11 @@
 class Admin::LoanedBooksController < Admin::BaseController
   before_action :check_valid_user, :find_book, :assign_new_loan, :check_quantity_add, :create_loan_detail, only: :create
 
+  def index
+    loaned_books = LoanedBook.newest
+    @pagy, @loaned_books = pagy loaned_books, items: Settings.pagy.digit_10
+  end
+
   def new
     @loaned_book = LoanedBook.new
   end
