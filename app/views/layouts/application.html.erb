@@ -12,12 +12,22 @@
   </head>
 
   <body>
-    <%= render "layouts/header" %>
-    <div class="container">
-      <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>
-      <%= yield %>
+    <div id="__next">
+      <div>
+        <%= render "layouts/header" %>
+        <main class="flex flex-row pl-70 pt-14">
+          <%= render "layouts/sidebar" %>
+          <div class="container">
+            <% flash.each do |message_type, message| %>
+              <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+            <% end %>
+            <%= yield %>
+          </div>
+        </main>
+      </div>
     </div>
+    <% if logged_in? %>
+      <%= render "layouts/modal_user" %>
+    <% end %>
   </body>
 </html>

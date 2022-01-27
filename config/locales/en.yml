@@ -19,6 +19,19 @@ en:
       help: Help
       contact: Contact
       log_in: Log in
+    modal_user:
+      profile: "Profile"
+      account_dt: "Account detail"
+      log_out: "Logout"
+    sidebar:
+      discover: "Discover"
+      popular: "Popular"
+      most_upvoted: "Most upvoted"
+      search: "Search"
+      manage: "Manage"
+      histoty_loan: "History loans"
+      all_loans: "All loans"
+      new_loan: "New loan"
   books:
     index:
       books: "Book"
@@ -28,6 +41,7 @@ en:
       year_published: "Year Published"
       search: "Search"
       input_name: "Input name"
+      all_books: "All Books"
     show:
       homepage: "Home"
       share_text: "Share"
