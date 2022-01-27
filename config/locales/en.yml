@@ -67,6 +67,20 @@ en:
       btn_loan: "Order"
     cart:
       category: "Category: "
+  loaned_books:
+    loaned_book:
+      detail: "Detail"
+      none_return: "Haven't return"
+      delete: "Cancel request"
+    index:
+      loaned_books: "Loaned Books"
+      show_info: "Show info"
+      date_loaned: "Date Loaned"
+      date_due: "Date Due"
+      date_returned: "Date Returned"
+      status: "Status"
+      quantity: "Quantity"
+      nil_loaned_books: "You haven't borrowed any books yet"
   admin:
     books:
       show:
@@ -120,3 +134,7 @@ en:
     please_log_in: "Please login"
     add_cart_success: "Book is added in your cart"
     del_success: "Deleted success"
+    continue_loans: "Continue loan"
+  time:
+    formats:
+      default: "%H:%M, %d %B %Y"

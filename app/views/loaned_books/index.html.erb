@@ -1,0 +1,27 @@
+<% provide :title, t(".loaned_books") %>
+
+<div style="margin-top: 10%;">
+<% if @loaned_books.any? %>
+  <table class="table table-striped table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col"><%= t ".date_loaned" %><i class="glyphicon glyphicon-sort"></i></th>
+        <th scope="col"><%= t ".date_due" %><i class="glyphicon glyphicon-sort"></i></th>
+        <th scope="col"><%= t ".date_returned" %></</th>
+        <th scope="col"><%= t ".status" %></</th>
+        <th scope="col"><%= t ".quantity" %></</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @loaned_books %>
+    </tbody>
+  </table>
+  <%== pagy_bootstrap_nav(@pagy) %>
+<% else %>
+  <div class="notice_banner">
+    <%= image_tag asset_path("empty_loan.jpg"), class: "notice_img", width: "300", height: "300" %>
+    <span class="notice_txt"><%= t ".nil_loaned_books" %></span>
+    <button class="btn btn-continue" onclick="location.href='/'"><%= t "notice.continue_loans" %></button>
+  </div>
+<% end %>
+</div>

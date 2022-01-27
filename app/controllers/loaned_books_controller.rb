@@ -4,6 +4,10 @@ class LoanedBooksController < ApplicationController
   before_action :logged_in_user, :check_valid_user
   before_action :load_cart, :check_quantity_add, :assign_new_loan, :create_loan_detail, only: :create
 
+  def index
+    @pagy, @loaned_books= pagy current_user.loaned_books.newest, items: Settings.pagy.digit_10
+  end
+
   def create
     ActiveRecord::Base.transaction do
       @loaned_book.save!
