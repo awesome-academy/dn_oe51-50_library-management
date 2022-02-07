@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :loaned_books
   has_many :loaned_details, through: :loaned_books
 
+  has_secure_password
+
   class << self
     def is_valid_member? user
       exists? id: user, role: User.roles[:member]
