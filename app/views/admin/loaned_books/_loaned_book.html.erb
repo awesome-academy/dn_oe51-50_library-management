@@ -1,0 +1,27 @@
+<tr>
+  <th scope="row"><%= loaned_book.user_id %></th>
+  <td><%= loaned_book.user.name %></td>
+  <td><%= l(loaned_book.date_loaned, format: :short) %></td>
+  <td><%= l(loaned_book.date_due, format: :long) %></td>
+  <td><%= loaned_book.quantity %></td>
+  <td>
+  <div class="select">
+    <% if arr_status_loaned.present? %>
+      <%= select_tag "select_status", options_for_select(arr_status_loaned.collect{|k, v| [k, v]}), class: "ddlViewBy", "data-status" => arr_status_loaned[loaned_book.status] %>
+      <div class="select__arrow"></div>
+    <% else %>
+      <select disabled>
+        <option><%= t ".none" %></option>
+      </select>
+      <div class="select__arrow"></div>
+    <% end %>
+    </div>
+  </td>
+  <td>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary" style="border-radius: 12px 0 0 12px;"><%= t ".delete" %></button>
+      <button type="button" class="btn btn-secondary" style="border-radius: 0 12px 12px 0;"><%= t ".accept" %></button>
+    </div>
+  </td>
+  <td><a href="#"><%= t ".show_detail" %></a></td>
+</tr>

@@ -88,6 +88,19 @@ vi:
         date_due: "Ngày đến hạn trả :"
         quantity: "Số lượng :"
         btn_submit: "Xác nhận"
+      index:
+        show_loans: "Tất cả đơn mượn"
+        all_loans: "Các yêu cầu mượn sách"
+        member_name: "Thành viên"
+        date_loaned: "Ngày mượn"
+        date_due: "Ngày trả"
+        quantity: "Số lượng"
+        options: "Tùy chọn"
+        show_detail: "Chi tiết"
+      loaned_book:
+        delete: "Xóa"
+        accept: "Phê duyệt"
+        none: "None"
   error:
     user_invalid: "Người dùng không hợp lệ !"
     forbiden: "Không có quyền truy cập"
