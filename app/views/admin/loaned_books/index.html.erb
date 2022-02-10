@@ -1,6 +1,11 @@
 <% provide :title, t(".show_loans") %>
 <h1 style="text-align: center;"><%= t ".all_loans" %></h1>
 
+<div id="notice_err1" class="alert alert-danger" role="alert" style="display: none;">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+</div>
+
 <table class="table">
   <thead class="thead-dark">
     <tr>

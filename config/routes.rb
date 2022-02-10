@@ -20,7 +20,11 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resources :books
-      resources :loaned_books
+      resources :loaned_books do
+        collection do
+          patch "update_status", to: "loaned_books#update_status"
+        end
+      end
     end
   end
 end

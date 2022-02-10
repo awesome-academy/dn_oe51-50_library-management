@@ -106,7 +106,11 @@ en:
     forbiden: "Cannot access permission"
     not_found_book: "Cannot found book"
     not_found_in_cart: "Cannot found in cart"
+    not_found_loans: "Cannot found loans"
+    not_found_loans_detail: "Cannot found loaned details"
     create_loan_failure: "Create loan failure !"
+    cannot_update_status: "Cannot update status !"
+    status_not_exist: "Status not exist !"
     quantity:
       not_valid: "Quantity invalid !"
       over: "Quantity over permit books !"
