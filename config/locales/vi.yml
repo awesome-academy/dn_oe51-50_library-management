@@ -67,6 +67,20 @@ vi:
       btn_loan: "Đặt sách"
     cart:
       category: "Loại sách: "
+  loaned_books:
+    loaned_book:
+      detail: "Xem chi tiết"
+      none_return: "Chưa trả"
+      delete: "Hủy yêu cầu"
+    index:
+      loaned_books: "Sách đã mượn"
+      show_info: "Thông tin chi tiết"
+      date_loaned: "Ngày cho mượn"
+      date_due: "Ngày đến hạn trả"
+      date_returned: "Ngày trả lại"
+      status: "Trạng thái"
+      quantity: "Số lượng"
+      nil_loaned_books: "Bạn chưa mượn bất kỳ cuốn sách nào"
   admin:
     books:
       show:
@@ -120,3 +134,7 @@ vi:
     please_log_in: "Vui lòng đăng nhập"
     add_cart_success: "Thêm vào giỏ hàng thành công"
     del_success: "Xóa thành công"
+    continue_loans: "Tiếp tục mượn"
+  time:
+    formats:
+      default: "%H:%M, %d %B %Y"

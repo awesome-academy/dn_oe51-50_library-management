@@ -1,0 +1,13 @@
+<tr>
+  <td><%= l(loaned_book.date_loaned) %></td>
+  <td><%= l(loaned_book.date_due) %></td>
+  <td><%= get_date_returned loaned_book.date_returned %></td>
+  <td><%= loaned_book.status %></td>
+  <td><%= loaned_book.quantity %></td>
+  <td>
+    <a href="#" class="view" title=<%= t ".detail" %> data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+    <% if loaned_book.pending? %>
+      <a href="#" class="delete" title=<%= t ".delete" %> data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+    <% end %>
+  </td>
+</tr>
