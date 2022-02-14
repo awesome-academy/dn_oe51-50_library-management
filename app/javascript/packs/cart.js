@@ -8,7 +8,7 @@ $(".alert-danger" ).fadeOut(3000);
 // Event click quantity block
 $(".item .ct-quant").on("click", function (event) {
   var target = event.target,
-    index = $(target).index();
+  index = $(target).index();
   var count = $(this).find("input[name=quant]").val();
 
   if (index == 0 && count > 0) {
@@ -22,7 +22,8 @@ $(".item .ct-quant").on("click", function (event) {
 
 // Event click get item block
 $(".item").on("click", function (event) {
-  idBook = parseInt($(this).index());
+  let subparent = $(this);
+  var idBook = parseInt(subparent[0].dataset.cart);
 
   updateQty(idBook, quantity);
 });
@@ -31,7 +32,7 @@ $(".item").on("click", function (event) {
 function updateQty(id, qty) {
   $.ajax({
     url: "/carts/update",
-    data: { id: id + 1, quantity: qty },
+    data: { id: id, quantity: qty },
     type: "PATCH",
   })
 }

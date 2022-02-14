@@ -1,23 +1,14 @@
 <% provide :title, t(".books") %>
-<h1><%= t(".books") %></h1>
 
-<%== pagy_bootstrap_nav(@pagy) %>
+<main class="withNavBar flex flex-column flex-1 items-start pb-3 pt-10 px-16">
+  <div class="relative mx-auto w-full wf-feed grid-col" style="--num-cards: 4; --feed-gap: 2rem;">
+    <header
+      class="flex flex-wrap overflow-x-auto relative justify-between items-center self-stretch mb-6 h-14 no-scrollbar">
 
-<ul class="books">
-  <%= form_tag(books_path, method: :get) do %>
-    <%= text_field_tag :term, params[:term], placeholder: t(".input_name") %>
-    <%= submit_tag t(".search"), class: "btn btn-sm btn-success" %>
-  <% end %>
-  <li>
-    <span><%= t ".book_title" %></span>
-    <span><%= t ".publishing_house" %></span>
-    <span><%= t ".quantity" %></span>
-    <span><%= t ".year_published" %></span>
-  </li>
-</ul>
-
-<ul class="books">
-  <%= render @books %>
-</ul>
-
-<%== pagy_bootstrap_nav(@pagy) %>
+      <h3 class="typo-headline"><%= t ".all_books" %></h3>
+    </header>
+    <div class="grid gap-8 grid-cols-4">
+      <%= render @books %>
+    </div>
+  </div>
+</main>

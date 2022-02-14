@@ -194,7 +194,7 @@ main{
   }
 }
 
-.group-button{
+.btn_loans{
   margin-top: 16px;
   flex: 1 1 0%;
   display: flex;
@@ -225,7 +225,7 @@ main{
 
 .btn-add-to-cart{
   color: $white;
-  background-color: $red_salsa;
+  background-color: $red_salsa !important;
 }
 
 .container{
@@ -252,7 +252,7 @@ main{
   cursor: pointer;
 }
 
-.header{
+.header_book_detail{
   padding: 16px 28px 16px 0px;
   position: relative;
 }

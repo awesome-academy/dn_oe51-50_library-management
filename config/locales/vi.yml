@@ -19,6 +19,19 @@ vi:
       help: Trợ giúp
       contact: Liên hệ
       log_in: Đăng nhập
+    modal_user:
+      profile: "Thông tin"
+      account_dt: "Thiết lập tài khoản"
+      log_out: "Đăng xuất"
+    sidebar:
+      discover: "Khám phá"
+      popular: "Phổ biến"
+      most_upvoted: "Được yêu thích"
+      search: "Tìm kiếm"
+      manage: "Quản lý"
+      histoty_loan: "Lịch sử mượn sách"
+      all_loans: "Xử lý mượn sách"
+      new_loan: "Tạo mới"
   books:
     index:
       books: "Sách"
@@ -28,6 +41,7 @@ vi:
       year_published: "Năm xuất bản"
       search: "Tìm kiếm"
       input_name: "Nhập tên sách"
+      all_books: "Tất cả sách"
     show:
       homepage: "Trang chủ"
       share_text: "Chia sẻ"

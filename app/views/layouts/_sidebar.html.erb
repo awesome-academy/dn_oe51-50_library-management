@@ -1,0 +1,111 @@
+<aside
+  class="w-60 -translate-x-70 top-14 h-[calc(100vh-theme(space.14))] flex flex-column -translate-x-0 left-0 bg-theme-bg-primary z-3 border-r border-theme-divider-tertiary transition-[width,transform] transform duration-300 ease-in-out group fixed top-0 h-full">
+  <div class="flex overflow-x-hidden overflow-y-auto flex-column h-full no-scrollbar">
+    <nav class="my-4">
+      <div class="h-[8.125rem] flex flex-column">
+        <% if logged_in? && !current_user.admin? %>
+          <button class="m-auto items-center btn-side-cart" onclick="location.href='/carts'"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+        <% end %>
+      </div>
+      <ul class="mt-2">
+        <li
+          class="block opacity-100 px-3 typo-footnote text-theme-label-quaternary h-7 flex items-center font-bold transition-opacity">
+          <%= t ".discover" %></li>
+        <li class="option-side text-theme-label-tertiary flex items-center typo-callout">
+          <button class="btn-side flex flex-1 items-center pl-0 pr-3 h-7" type="button">
+            <span class="relative px-3">
+              <svg class="w-5 h-5 pointer-events-none" height="1em" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.984 4.803l.6.746.876 1.058.834.999.523.641c1.27 1.585 2.243 2.633 2.557 4.315a5.655 5.655 0 01-.465 3.451c-.922 1.95-3 3.339-5.154 3.445-.09.004-.18.006-.268.006-2.083 0-4.118-1.176-5.123-2.967-1.338-2.348-1.037-5.129.748-6.943.638-.648.975-.64 1.013.023l.003.132.001.566.009.574.013.381.022.376c.102 1.426.44 2.665 1.557 2.852.682.114 1.407-.064 1.853-.818.295-.509.353-1.11.163-1.69l-.073-.193-.09-.195-.115-.236-.218-.431-.275-.522-.33-.614c-.775-1.43-.908-3.343.206-4.925a.707.707 0 011.133-.03z"
+                  fill="currentcolor" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+            <span class="flex-1 text-left transition-opacity opacity-100 delay-150"><%= t ".popular" %></span>
+          </button>
+        </li>
+
+        <li class="option-side text-theme-label-tertiary flex items-center typo-callout">
+          <button class="btn-side flex flex-1 items-center pl-0 pr-3 h-7" type="button">
+            <span class="relative px-3">
+              <svg class="w-5 h-5 pointer-events-none" height="1em" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.162 3.813a2 2 0 01.465.465l6.674 9.343a1 1 0 01-1.102 1.539l-4.032-1.21a1 1 0 00-1.277.816l-.767 5.375a1 1 0 01-.99.859h-.266a1 1 0 01-.99-.859l-.767-5.375a1 1 0 00-1.278-.816l-4.031 1.21a1 1 0 01-1.102-1.54l6.674-9.342a2 2 0 012.79-.465z"
+                  fill="currentcolor" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+            <span class="flex-1 text-left transition-opacity opacity-100 delay-150"><%= t ".most_upvoted" %></span>
+          </button>
+        </li>
+
+        <li class="option-side text-theme-label-tertiary flex items-center typo-callout">
+          <button class="btn-side flex flex-1 items-center pl-0 pr-3 h-7" type="button">
+            <span class="relative px-3">
+              <svg class="w-5 h-5 pointer-events-none" height="1em" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.94 15.82l2.122 2.12a1.5 1.5 0 11-2.121 2.122l-2.122-2.121a1.5 1.5 0 012.122-2.122zm-7.44-.32a5 5 0 100-10 5 5 0 000 10zm0 2a7 7 0 110-14 7 7 0 010 14z"
+                  fill="currentcolor" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+            <span class="flex-1 text-left transition-opacity opacity-100 delay-150"><%= t ".search" %></span>
+          </button>
+        </li>
+      </ul>
+      <% if logged_in? %>
+        <ul class="mt-2">
+          <li
+            class="block opacity-100 px-3 typo-footnote text-theme-label-quaternary h-7 flex items-center font-bold transition-opacity">
+            <%= t ".manage" %></li>
+          <% unless current_user.admin? %>
+
+            <li class="option-side text-theme-label-tertiary flex items-center typo-callout">
+              <button class="btn-side flex flex-1 items-center pl-0 pr-3 h-7" onclick="location.href='/loaned_books'" type="button">
+                <span class="relative px-3">
+                  <svg class="w-5 h-5 pointer-events-none" height="1em" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.984 4.803l.6.746.876 1.058.834.999.523.641c1.27 1.585 2.243 2.633 2.557 4.315a5.655 5.655 0 01-.465 3.451c-.922 1.95-3 3.339-5.154 3.445-.09.004-.18.006-.268.006-2.083 0-4.118-1.176-5.123-2.967-1.338-2.348-1.037-5.129.748-6.943.638-.648.975-.64 1.013.023l.003.132.001.566.009.574.013.381.022.376c.102 1.426.44 2.665 1.557 2.852.682.114 1.407-.064 1.853-.818.295-.509.353-1.11.163-1.69l-.073-.193-.09-.195-.115-.236-.218-.431-.275-.522-.33-.614c-.775-1.43-.908-3.343.206-4.925a.707.707 0 011.133-.03z"
+                      fill="currentcolor" fill-rule="evenodd"></path>
+                  </svg>
+                </span>
+                <span class="flex-1 text-left transition-opacity opacity-100 delay-150"><%= t ".histoty_loan" %></span>
+              </button>
+            </li>
+
+          <% else %>
+
+            <li class="option-side text-theme-label-tertiary flex items-center typo-callout">
+              <button class="btn-side flex flex-1 items-center pl-0 pr-3 h-7" onclick="location.href='/admin/loaned_books'" type="button">
+                <span class="relative px-3">
+                  <svg class="w-5 h-5 pointer-events-none" height="1em" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.984 4.803l.6.746.876 1.058.834.999.523.641c1.27 1.585 2.243 2.633 2.557 4.315a5.655 5.655 0 01-.465 3.451c-.922 1.95-3 3.339-5.154 3.445-.09.004-.18.006-.268.006-2.083 0-4.118-1.176-5.123-2.967-1.338-2.348-1.037-5.129.748-6.943.638-.648.975-.64 1.013.023l.003.132.001.566.009.574.013.381.022.376c.102 1.426.44 2.665 1.557 2.852.682.114 1.407-.064 1.853-.818.295-.509.353-1.11.163-1.69l-.073-.193-.09-.195-.115-.236-.218-.431-.275-.522-.33-.614c-.775-1.43-.908-3.343.206-4.925a.707.707 0 011.133-.03z"
+                      fill="currentcolor" fill-rule="evenodd"></path>
+                  </svg>
+                </span>
+                <span class="flex-1 text-left transition-opacity opacity-100 delay-150"><%= t ".all_loans" %></span>
+              </button>
+            </li>
+
+            <li class="option-side text-theme-label-tertiary flex items-center typo-callout">
+              <button class="btn-side flex flex-1 items-center pl-0 pr-3 h-7" onclick="location.href='/admin/loaned_books/new'" type="button">
+                <span class="relative px-3">
+                  <svg class="w-5 h-5 pointer-events-none" height="1em" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.78 10.22h4.44a1.78 1.78 0 010 3.56h-4.44v4.44a1.78 1.78 0 01-3.56 0v-4.44H5.78a1.78 1.78 0 010-3.56h4.44V5.78a1.78 1.78 0 013.56 0v4.44z"
+                    fill="currentcolor" fill-rule="evenodd"></path>
+                  </svg>
+                </span>
+                <span class="flex-1 text-left transition-opacity opacity-100 delay-150"><%= t ".new_loan" %></span>
+              </button>
+            </li>
+
+        <% end%>
+        </ul>
+      <% end %>
+    </nav>
+  </div>
+</aside>

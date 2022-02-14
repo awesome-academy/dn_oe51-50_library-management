@@ -49,3 +49,18 @@ $a-tag-table: #a0a5b1;
 $view-icon: #03A9F4;
 $delete-icon: #E34724;
 $edit-icon: #FFC107;
+
+html {
+  --theme-active: rgba(82, 88, 102, 0.2);
+  --theme-hover: rgba(82, 88, 102, 0.12156862745098039);
+  --theme-background-primary: #fff;
+  --theme-background-secondary: #f5f8fc;
+  --theme-label-primary: #0e1217;
+  --theme-label-tertiary: #525866;
+  --theme-label-quaternary: rgba(82, 88, 102, 0.6392156862745098);
+  --theme-label-link: #153ce0;
+  --theme-label-invert: #fff;
+  --theme-divider-secondary: rgba(82, 88, 102, 0.4);
+  --theme-divider-tertiary: rgba(82, 88, 102, 0.2);
+  --theme-shadow2: 0 0.375rem 0.375rem -0.125rem rgba(168, 179, 207, 0.4);
+}

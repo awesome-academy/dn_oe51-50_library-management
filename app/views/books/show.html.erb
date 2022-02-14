@@ -1,7 +1,7 @@
 <main>
   <div class="category-tree">
         <div class="breadcrumb">
-          <%= link_to t(".homepage"), home_path, class: "breadcrumb-item" %>
+          <%= link_to t(".homepage"), root_path, class: "breadcrumb-item" %>
           <span class="material-icons icon icon-next">navigate_next</span>
           <%= link_to @book.book_title, "#", class: "breadcrumb-item" %>
         </div>
@@ -12,7 +12,7 @@
         <div class="group-images">
           <div class="container-images">
             <picture>
-              <%= image_tag asset_path("thumbnail.jpg") %>
+              <%= image_tag "books/book#{rand(4)}.jpg" %>
             </picture>
           </div>
         </div>
@@ -32,7 +32,7 @@
       <div class="style__StyledSperate sperate"></div>
 
       <div class="style__StyleProductContent">
-        <div class="header">
+        <div class="header_book_detail">
           <div class="brand">
             <!-- Updating -->
             <div class="bestseller"></div>
@@ -85,7 +85,7 @@
                   </div>
                 </div>
               </div>
-              <div class="group-button">
+              <div class="btn_loans">
                 <%= button_to t(".btn_loan"), carts_path(id: @book.id, quantity: 1), class: "btn-add-to-cart", method: :post %>
               </div>
             </div>
