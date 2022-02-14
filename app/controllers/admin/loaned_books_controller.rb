@@ -56,7 +56,8 @@ class Admin::LoanedBooksController < Admin::BaseController
   def create_loan_detail
     @loaned_book.loaned_details.build(
       book_id: @book.id,
-      quantity: @quantity
+      quantity: @quantity,
+      status: LoanedDetail.statuses[:rending]
     )
   end
 
