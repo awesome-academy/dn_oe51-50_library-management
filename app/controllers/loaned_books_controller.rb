@@ -25,7 +25,8 @@ class LoanedBooksController < ApplicationController
     @carts.each do |book, quantity|
       @loaned_book.loaned_details.build(
         book_id: book.id,
-        quantity: quantity
+        quantity: quantity,
+        status: LoanedDetail.statuses[:pending]
       )
     end
   end
@@ -42,7 +43,8 @@ class LoanedBooksController < ApplicationController
     @loaned_book = current_user.loaned_books.build(
       date_loaned: Time.now,
       date_due: Time.now + Settings.df_date_due.days,
-      quantity: @quantity
+      quantity: @quantity,
+      status: LoanedBook.statuses[:pending]
     )
   end
 
