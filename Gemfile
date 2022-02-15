@@ -28,6 +28,7 @@ group :development, :test do
   gem "rubocop-rails", "~> 2.3.2", require: false
   gem "rspec-rails", "~> 5.0.0"
   gem "rails-controller-testing"
+  gem "shoulda-matchers", "~> 5.0"
 end
 
 group :development do
