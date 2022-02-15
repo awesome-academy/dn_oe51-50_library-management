@@ -33,10 +33,6 @@ class LoanedBooksController < ApplicationController
 
   def load_cart
     @carts = get_all_item_in_cart
-    return if @carts
-
-    flash[:info] = t "notice.nothing_in_cart"
-    redirect_to home_path
   end
 
   def assign_new_loan
