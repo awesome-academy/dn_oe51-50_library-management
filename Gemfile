@@ -7,6 +7,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "bcrypt", ">= 2.1.4"
 gem "config"
+gem "factory_bot_rails"
 gem "faker", "2.1.2"
 gem "jbuilder", "~> 2.7"
 gem "mysql2", "~> 0.5.2"
@@ -26,6 +27,7 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
   gem "rspec-rails", "~> 5.0.0"
+  gem "rails-controller-testing"
 end
 
 group :development do
