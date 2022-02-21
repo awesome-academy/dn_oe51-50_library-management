@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :loaned_books
   has_many :loaned_details, through: :loaned_books
 
+  validates_presence_of :role, :name, :address, :email, :phone_number, :password, :city, :password_digest
+
   has_secure_password
 
   class << self
