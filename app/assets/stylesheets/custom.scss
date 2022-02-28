@@ -44,6 +44,18 @@ input {
   height: auto !important;
 }
 
+.alert-notice{
+  color: $blue_notice;
+  background-color: $bg--alert-notice;
+  border-color: $border--alert-notice;
+}
+
+.alert-alert{
+  color: $red_alert;
+  background-color: $bg--alert-danger;
+  border-color: $border--alert-danger;
+}
+
 #error_explanation {
   color: $primary-red;
   ul {

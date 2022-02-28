@@ -4,9 +4,9 @@ class User < ApplicationRecord
   has_many :loaned_books
   has_many :loaned_details, through: :loaned_books
 
-  validates_presence_of :role, :name, :address, :email, :phone_number, :password, :city, :password_digest
+  validates_presence_of :role, :name, :address, :email, :phone_number, :password, :city
 
-  has_secure_password
+  devise :database_authenticatable, :validatable
 
   class << self
     def is_valid_member? user
@@ -20,14 +20,5 @@ class User < ApplicationRecord
       end
       sum_loaned_book.to_i
     end
-  end
-
-  def digest string
-    cost = if ActiveModel::SecurePassword.min_cost
-             BCrypt::Engine::MIN_COST
-           else
-             BCrypt::Engine.cost
-           end
-    BCrypt::Password.create string, cost: cost
   end
 end

@@ -1,7 +1,7 @@
 class LoanedBooksController < ApplicationController
   include SessionsHelper, CartsHelper
 
-  before_action :logged_in_user, :check_valid_user
+  before_action :authenticate_user!, :check_valid_user
   before_action :load_cart, :check_quantity_add, :assign_new_loan, :create_loan_detail, only: :create
 
   def index

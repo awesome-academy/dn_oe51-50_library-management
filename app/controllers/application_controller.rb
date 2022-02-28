@@ -4,13 +4,6 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  def logged_in_user
-    return if logged_in?
-
-    flash[:danger] = t "notice.please_log_in"
-    redirect_to login_url
-  end
-
   def check_valid_user
     return if current_user.member?
 
