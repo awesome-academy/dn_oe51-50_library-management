@@ -11,6 +11,10 @@ RSpec.describe BooksController, type: :controller do
     it "assigns @books" do
       expect(assigns(:books)).to match_array @books
     end
+
+    it "renders the index template" do
+      expect(response).to render_template :index
+    end
   end
 
   describe "GET #show" do

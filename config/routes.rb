@@ -13,9 +13,13 @@ Rails.application.routes.draw do
       end
     end
 
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
+    devise_for :users, controllers: {sessions: "sessions"}
+
+    devise_scope :user do
+      get "login", to: "sessions#new"
+      delete "logout", to: "sessions#destroy"
+    end
+
     resources :users
 
     namespace :admin do

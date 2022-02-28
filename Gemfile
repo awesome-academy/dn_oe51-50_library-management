@@ -7,6 +7,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "bcrypt", ">= 2.1.4"
 gem "config"
+gem "devise"
 gem "factory_bot_rails"
 gem "faker", "2.1.2"
 gem "jbuilder", "~> 2.7"

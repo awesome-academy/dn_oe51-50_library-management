@@ -30,10 +30,12 @@ $near_white: #EFEFEF;
 $white : #FFFFFF;
 
 $blue: #0D5CB6;
+$blue_notice: #31708f;
 
 $primary-red: red;
 $red_salsa: #FF3945;
 $red_salsa_hover: #fc6d76;
+$red_alert: #a94442;
 
 $shadow: rgba(0, 0, 0, 0.05);
 
@@ -43,6 +45,10 @@ $color--grey: #CCCCCC;
 $color--dark-grey: #7B7B7B;
 
 $border-table: #e9e9e9;
+$border--alert-notice: #bce8f1;
+$border--alert-danger: #ebccd1;
+$bg--alert-notice: #d9edf7;
+$bg--alert-danger: #f2dede;
 $row-odd-table: #fcfcfc;
 $hover-row-table: #f5f5f5;
 $a-tag-table: #a0a5b1;

@@ -1,19 +1,5 @@
-class SessionsController < ApplicationController
-  def new; end
-
-  def create
-    user = User.find_by email: params[:session][:email].downcase
-    if user&.authenticate params[:session][:password]
-      login_in user
-      redirect_to root_url
-    else
-      flash.now[:danger] = t "flash.invalid_email_password_combination"
-      render :new
-    end
-  end
-
-  def destroy
-    log_out
-    redirect_to root_url
+class SessionsController < Devise::SessionsController
+  def after_sign_in_path_for(_resource)
+    root_path
   end
 end

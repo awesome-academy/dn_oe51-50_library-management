@@ -15,8 +15,7 @@ RSpec.describe User, type: :model do
     it {is_expected.to validate_presence_of(:email)}
     it {is_expected.to validate_presence_of(:phone_number)}
     it {is_expected.to validate_presence_of(:city)}
-    it {is_expected.to validate_presence_of(:password_digest)}
-    it {is_expected.to have_secure_password}
+
     it {is_expected.to define_enum_for(:role).with_values(%w(admin member guest))}
 
     it {expect(User.roles[:admin]).to eql 0}
@@ -94,20 +93,6 @@ RSpec.describe User, type: :model do
 
     it "with .get total loaned books" do
       expect(User.get_total_loaned_books subject).to eql 2
-    end
-
-    it "with #digest with min cost" do
-      ActiveModel::SecurePassword.min_cost = true
-      expect(subject.digest subject.password).to match /^\$2[ayb]\$.{56}$/
-    end
-
-    it "with #digest with cost" do
-      ActiveModel::SecurePassword.min_cost = false
-      expect(subject.digest subject.password).to match /^\$2[ayb]\$.{56}$/
-    end
-
-    it "with #digest compare pass" do
-      expect(subject.digest subject.password).not_to eql subject.password
     end
   end
 end

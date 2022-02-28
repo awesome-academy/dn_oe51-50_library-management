@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
   include SessionsHelper, CartsHelper
 
-  before_action :logged_in_user, :check_valid_user
+  before_action :authenticate_user!, :check_valid_user
   before_action :find_book, only: :create
   before_action :check_key_in_cart, only: %i(destroy update)
   before_action :check_quantity_update, only: :update
