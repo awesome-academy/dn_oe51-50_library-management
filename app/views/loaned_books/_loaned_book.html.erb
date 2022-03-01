@@ -6,7 +6,7 @@
   <td><%= loaned_book.quantity %></td>
   <td>
     <a href="#" class="view" title=<%= t ".detail" %> data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-    <% if loaned_book.pending? %>
+    <% if can? :destroy, loaned_book %>
       <a href="#" class="delete" title=<%= t ".delete" %> data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
     <% end %>
   </td>

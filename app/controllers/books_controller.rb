@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :find_book, except: :index
+  authorize_resource
 
   def index
     books = Book.search_by_tilte(params[:term]).newest

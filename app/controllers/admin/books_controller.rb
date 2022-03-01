@@ -1,5 +1,6 @@
 class Admin::BooksController < Admin::BaseController
   before_action :find_book, except: :index
+  authorize_resource
 
   def show
     @authors = @book.authors
