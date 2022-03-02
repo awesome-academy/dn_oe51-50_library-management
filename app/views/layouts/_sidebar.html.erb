@@ -58,7 +58,7 @@
           <li
             class="block opacity-100 px-3 typo-footnote text-theme-label-quaternary h-7 flex items-center font-bold transition-opacity">
             <%= t ".manage" %></li>
-          <% unless current_user.admin? %>
+          <% unless can? :manage, :all %>
 
             <li class="option-side text-theme-label-tertiary flex items-center typo-callout">
               <button class="btn-side flex flex-1 items-center pl-0 pr-3 h-7" onclick="location.href='/loaned_books'" type="button">

@@ -3,6 +3,7 @@ class Admin::LoanedBooksController < Admin::BaseController
   before_action :check_valid_user, :find_book, :assign_new_loan, :check_quantity_add, :create_loan_detail, only: :create
   before_action :load_loaned_book_update, :check_status_params, only: :update_status
   skip_before_action :verify_authenticity_token, only: :update_status
+  authorize_resource
 
   def index
     loaned_books = LoanedBook.newest

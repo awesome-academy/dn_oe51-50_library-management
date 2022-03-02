@@ -6,6 +6,7 @@ ruby "2.7.0"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "bcrypt", ">= 2.1.4"
+gem "cancancan"
 gem "config"
 gem "devise"
 gem "factory_bot_rails"
